@@ -61,7 +61,9 @@ class DiffTests(unittest.TestCase):
         ctx = report.build_context(self.conn, self.run2, self.today, 180, ["x<script>"])
         md, html_body = report.to_markdown(ctx), report.to_html(ctx)
         self.assertIn("4.10.5", md)
-        self.assertNotIn("<script>", html_body)
+        # The report has its own <script> (the filter), so check the injected text, not any script tag.
+        self.assertNotIn("x<script>", html_body)
+        self.assertIn("x&lt;script&gt;", html_body)
 
     def test_baseline_report(self):
         ctx = report.build_context(self.conn, self.run1, self.today, 180, [])
