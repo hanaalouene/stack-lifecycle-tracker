@@ -1,0 +1,5 @@
+__pycache__/
+reports/
+logs/
+.env
+# data/ is committed on purpose: it is the history the monthly diff relies on.

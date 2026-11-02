@@ -1,0 +1,45 @@
+# Technologies to track.
+# source = "endoflife"  -> fetched from https://endoflife.date (slug = product id in their API)
+# source = "manual"     -> read from config/manual_releases.toml (for products the API does not cover)
+#
+# Find a slug: https://endoflife.date/api/v1/products/  (field "name")
+
+[[product]]
+slug = "mulesoft-runtime"
+label = "MuleSoft Mule Runtime"
+source = "endoflife"
+
+[[product]]
+slug = "oracle-jdk"
+label = "Java (Oracle JDK)"
+source = "endoflife"
+
+[[product]]
+slug = "eclipse-temurin"
+label = "Java (Eclipse Temurin)"
+source = "endoflife"
+
+[[product]]
+slug = "spring-boot"
+label = "Spring Boot"
+source = "endoflife"
+
+[[product]]
+slug = "python"
+label = "Python"
+source = "endoflife"
+
+[[product]]
+slug = "dbt-core"
+label = "dbt Core"
+source = "endoflife"
+
+[[product]]
+slug = "apache-airflow"
+label = "Apache Airflow"
+source = "endoflife"
+
+[[product]]
+slug = "talend"
+label = "Talend (Qlik)"
+source = "manual"

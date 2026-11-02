@@ -1,0 +1,28 @@
+# Manual release data for products that endoflife.date does not cover (e.g. Talend).
+# Maintain this file by hand from the vendor's official lifecycle page, then set verified = true.
+# Entries with verified = false are shown as "unverified" in the report.
+#
+# Official source (Qlik Talend): https://help.qlik.com/talend/en-US/customer-support-statements/Cloud/product-end-of-life-planning
+#
+# The values below come from a web search summary, NOT from reading the official table.
+# Check them on the page above before trusting them.
+
+[[release]]
+product = "talend"
+label = "Talend (Qlik)"
+cycle = "8"
+release_date = "2021-11-01"
+latest_version = ""          # fill in from the Talend Studio release notes (monthly updates)
+eol_from = ""                # no end-of-life date announced in the source I found
+verified = false
+link = "https://help.qlik.com/talend/en-US/customer-support-statements/Cloud/product-end-of-life-planning"
+
+[[release]]
+product = "talend"
+label = "Talend (Qlik)"
+cycle = "7.3"
+release_date = ""
+latest_version = ""
+eol_from = "2024-11-30"
+verified = false
+link = "https://help.qlik.com/talend/en-US/customer-support-statements/Cloud/product-end-of-life-planning"
