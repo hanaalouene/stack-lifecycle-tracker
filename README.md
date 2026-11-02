@@ -47,9 +47,9 @@ This process ensures that every month's data is kept, so any month can be compar
 - When the HTML file is opened in a browser, a **filter bar** lets you show only Critical, High, Medium... rows. Mail clients block scripts, so the email shows all rows.
 - The report is sent by email (HTML + Markdown) when the SMTP variables are set. If they are not, the report is only saved on disk.
 
-### Scheduling and Server Management
-- **GitHub Actions (recommended):** the workflow `.github/workflows/monthly-report.yml` runs the tests, then the pipeline, then commits `data/` back to the repository so the next month can compare against it. It also runs on demand from the Actions tab.
-- **Windows Task Scheduler:** `scripts/run_monthly.ps1` runs the same pipeline on your own PC.
+
+<img width="1190" height="799" alt="image" src="https://github.com/user-attachments/assets/d2e7d075-38df-4e53-8a4e-1a814f9ef08f" />
+
 
 ## Architecture
 
@@ -158,9 +158,3 @@ schtasks /Create /SC MONTHLY /D 1 /ST 08:00 /TN "TechVersionWatch" /TR "powershe
 - `run.py` is the launcher that starts the whole pipeline.
 - `cli.py` is the module that ingests, stores, reports and sends the email.
 
-## Ideas to extend it
-
-- Add a GitHub Releases source for tools that publish there.
-- Data-quality checks (no empty latest version, valid ISO dates, row-count guard) before loading.
-- Replace SQLite with DuckDB or a free-tier cloud warehouse, and add a Streamlit or Power BI dashboard.
-- Slack or Teams webhook notification next to the email.
