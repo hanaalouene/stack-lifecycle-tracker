@@ -8,6 +8,11 @@ new versions, versions that reached end of life, upcoming end-of-life dates, cha
 [endoflife.date](https://endoflife.date/docs/api/v1/) API, SMTP for the email, GitHub Actions or
 Windows Task Scheduler for the schedule.
 
+## Report Overview 
+
+<img width="1190" height="799" alt="image" src="https://github.com/user-attachments/assets/d2e7d075-38df-4e53-8a4e-1a814f9ef08f" />
+
+
 ## Architecture
 
 ```
@@ -73,10 +78,3 @@ New-Item -ItemType Directory -Force C:\Users\DELL\tech-version-watch\logs
 schtasks /Create /SC MONTHLY /D 1 /ST 08:00 /TN "TechVersionWatch" /TR "powershell -NoProfile -File C:\Users\DELL\tech-version-watch\scripts\run_monthly.ps1"
 ```
 
-## Ideas to extend it (good for your portfolio)
-
-- Add a GitHub Releases source for tools that publish there (a second `fetch_*` function and `source = "github"`).
-- Data-quality checks (no empty latest version, dates in ISO format) before loading.
-- Replace SQLite with DuckDB or load into a free-tier cloud warehouse; add a small Streamlit or Power BI dashboard on the snapshots.
-- Slack or Teams webhook notification next to the email.
-- Alert only when an end-of-life date falls within 90 days, in a separate weekly job.
